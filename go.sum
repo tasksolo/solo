@@ -12,8 +12,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dchest/uniuri v1.2.0 h1:koIcOUdrTIivZgSLhHQvKgqdWZq5d7KdMEWF1Ud6+5g=
 github.com/dchest/uniuri v1.2.0/go.mod h1:fSzm4SLHzNZvWLvWJew423PhAzkpNQYq+uNLq4kxhkY=
-github.com/firestuff/patchy v0.0.0-20230403043446-57dee4fc377f h1:/61VbTQ96bzDF2PF3owVrPjDBtsa7Q7bI+R8kmKCQEY=
-github.com/firestuff/patchy v0.0.0-20230403043446-57dee4fc377f/go.mod h1:iq2RzpUxBTHlhu4hvY44J5nIsrWPVl58QhNVZwqEjkk=
+github.com/firestuff/patchy v0.0.0-20230403235223-bd495b8a5832 h1:WdEVylZNAoXWju9IrxI2oAqxsZ67QsafDT0RlyPxvXU=
+github.com/firestuff/patchy v0.0.0-20230403235223-bd495b8a5832/go.mod h1:9g6gvCBZb0xWiLOkHn9Z70oQoBRq0Tu9y1swd2uU6Dk=
 github.com/getkin/kin-openapi v0.115.0 h1:c8WHRLVY3G8m9jQTy0/DnIuljgRwTCB5twZytQS4JyU=
 github.com/getkin/kin-openapi v0.115.0/go.mod h1:l5e9PaFUo9fyLJCPGQeXI2ML8c3P8BHOEV2VaAVf/pc=
 github.com/go-openapi/jsonpointer v0.19.5/go.mod h1:Pl9vOtqEWErmShwVjC8pYs9cog34VGT37dQOVbmoatg=
@@ -63,8 +63,8 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
-github.com/tasksolo/gosolo v0.0.0-20230403041414-805f467b5f71 h1:QOnVvaasCgF1w/MCmhASIhLdDZFozx/ZKOt5Ogo+yjE=
-github.com/tasksolo/gosolo v0.0.0-20230403041414-805f467b5f71/go.mod h1:hC8CxkSfblMyME2zN6cwRcRINc8UlFziO6KYz6WVAjQ=
+github.com/tasksolo/gosolo v0.0.0-20230403235246-b389294035ca h1:/n6Mil3EhexZBFbi587SpSk1bUK+BDNHnBM0BvDvdQc=
+github.com/tasksolo/gosolo v0.0.0-20230403235246-b389294035ca/go.mod h1:JVsAlXuuH2h8SG4fqtoQruRFjldZzu35HHcQ5VMJdeM=
 github.com/ugorji/go v1.2.7 h1:qYhyWUUd6WbiM+C6JZAUkIJt/1WrjzNHY9+KCIjVqTo=
 github.com/ugorji/go v1.2.7/go.mod h1:nF9osbDWLy6bDVv/Rtoh6QgnvNDpmCalQV5urGCCS6M=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
