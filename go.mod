@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/chzyer/readline v1.5.1
-	github.com/firestuff/patchy v0.0.0-20230403235223-bd495b8a5832
-	github.com/tasksolo/gosolo v0.0.0-20230404025712-baf2990cc40f
+	github.com/firestuff/patchy v0.0.0-20230404031608-6c0fdfa87b6c
+	github.com/tasksolo/gosolo v0.0.0-20230404034700-70111f36a419
 )
 
 require (

@@ -12,8 +12,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/dchest/uniuri v1.2.0 h1:koIcOUdrTIivZgSLhHQvKgqdWZq5d7KdMEWF1Ud6+5g=
 github.com/dchest/uniuri v1.2.0/go.mod h1:fSzm4SLHzNZvWLvWJew423PhAzkpNQYq+uNLq4kxhkY=
-github.com/firestuff/patchy v0.0.0-20230403235223-bd495b8a5832 h1:WdEVylZNAoXWju9IrxI2oAqxsZ67QsafDT0RlyPxvXU=
-github.com/firestuff/patchy v0.0.0-20230403235223-bd495b8a5832/go.mod h1:9g6gvCBZb0xWiLOkHn9Z70oQoBRq0Tu9y1swd2uU6Dk=
+github.com/firestuff/patchy v0.0.0-20230404031608-6c0fdfa87b6c h1:9cwX8hDpgx1T6U4pfBIDp/YshZaLctXRyr1ZfEwhnAM=
+github.com/firestuff/patchy v0.0.0-20230404031608-6c0fdfa87b6c/go.mod h1:9g6gvCBZb0xWiLOkHn9Z70oQoBRq0Tu9y1swd2uU6Dk=
 github.com/getkin/kin-openapi v0.115.0 h1:c8WHRLVY3G8m9jQTy0/DnIuljgRwTCB5twZytQS4JyU=
 github.com/getkin/kin-openapi v0.115.0/go.mod h1:l5e9PaFUo9fyLJCPGQeXI2ML8c3P8BHOEV2VaAVf/pc=
 github.com/go-openapi/jsonpointer v0.19.5/go.mod h1:Pl9vOtqEWErmShwVjC8pYs9cog34VGT37dQOVbmoatg=
@@ -63,10 +63,10 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
-github.com/tasksolo/gosolo v0.0.0-20230403235246-b389294035ca h1:/n6Mil3EhexZBFbi587SpSk1bUK+BDNHnBM0BvDvdQc=
-github.com/tasksolo/gosolo v0.0.0-20230403235246-b389294035ca/go.mod h1:JVsAlXuuH2h8SG4fqtoQruRFjldZzu35HHcQ5VMJdeM=
-github.com/tasksolo/gosolo v0.0.0-20230404025712-baf2990cc40f h1:K7NgrDfysbR27d3MYFgaAabDSVlsoFT43g+5MHuHob0=
-github.com/tasksolo/gosolo v0.0.0-20230404025712-baf2990cc40f/go.mod h1:JVsAlXuuH2h8SG4fqtoQruRFjldZzu35HHcQ5VMJdeM=
+github.com/tasksolo/gosolo v0.0.0-20230404031633-ec63d165e3ab h1:P6vJifKekQHjJMmAFru5CTqeadb2r9aUhQV3hj9RYww=
+github.com/tasksolo/gosolo v0.0.0-20230404031633-ec63d165e3ab/go.mod h1:Rbkgjsmu1yza7Q5ECxvVU1UoMsDzMz3Mx5rAI44Onvg=
+github.com/tasksolo/gosolo v0.0.0-20230404034700-70111f36a419 h1:lTzbPSyRGZeuldbpCpo8PISrASIsWb6dABXGX5XNkfo=
+github.com/tasksolo/gosolo v0.0.0-20230404034700-70111f36a419/go.mod h1:AYccatCplAj2USugCvr7dtRAnkuyvyVqco6jEX50+Iw=
 github.com/ugorji/go v1.2.7 h1:qYhyWUUd6WbiM+C6JZAUkIJt/1WrjzNHY9+KCIjVqTo=
 github.com/ugorji/go v1.2.7/go.mod h1:nF9osbDWLy6bDVv/Rtoh6QgnvNDpmCalQV5urGCCS6M=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
