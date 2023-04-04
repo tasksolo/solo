@@ -63,8 +63,6 @@ github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
-github.com/tasksolo/gosolo v0.0.0-20230404031633-ec63d165e3ab h1:P6vJifKekQHjJMmAFru5CTqeadb2r9aUhQV3hj9RYww=
-github.com/tasksolo/gosolo v0.0.0-20230404031633-ec63d165e3ab/go.mod h1:Rbkgjsmu1yza7Q5ECxvVU1UoMsDzMz3Mx5rAI44Onvg=
 github.com/tasksolo/gosolo v0.0.0-20230404034700-70111f36a419 h1:lTzbPSyRGZeuldbpCpo8PISrASIsWb6dABXGX5XNkfo=
 github.com/tasksolo/gosolo v0.0.0-20230404034700-70111f36a419/go.mod h1:AYccatCplAj2USugCvr7dtRAnkuyvyVqco6jEX50+Iw=
 github.com/ugorji/go v1.2.7 h1:qYhyWUUd6WbiM+C6JZAUkIJt/1WrjzNHY9+KCIjVqTo=
