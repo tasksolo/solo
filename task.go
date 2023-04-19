@@ -53,7 +53,7 @@ func completeTask(ctx context.Context, c *gosolo.Client, args []string) error {
 	}
 
 	complete := true
-	updated, err := c.UpdateTask(ctx, task.ID, &gosolo.Task{
+	updated, err := c.UpdateTask(ctx, task.ID, &gosolo.TaskRequest{
 		Complete: &complete,
 	}, nil)
 	if err != nil {
@@ -65,7 +65,7 @@ func completeTask(ctx context.Context, c *gosolo.Client, args []string) error {
 	return nil
 }
 
-func printTask(task *gosolo.Task) {
+func printTask(task *gosolo.TaskResponse) {
 	complete := "o"
 	name := *task.Name
 
