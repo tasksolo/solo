@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/firestuff/patchy/metadata"
 	"github.com/firestuff/patchy/path"
+	"github.com/gopatchy/metadata"
 )
 
 func getShortID(obj any) string {

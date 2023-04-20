@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/firestuff/patchy/metadata"
+	"github.com/gopatchy/metadata"
 	"github.com/tasksolo/gosolo"
 )
 
