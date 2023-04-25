@@ -6,6 +6,6 @@ import (
 	"github.com/tasksolo/gosolo"
 )
 
-func printUser(user *gosolo.UserResponse) {
-	fmt.Printf("%s %30s %s\n", getShortID(user), ifEmpty(user.Email), ifEmpty(user.Name))
+func printUser(user *gosolo.User) {
+	fmt.Printf("%s %30s %s\n", getShortID(user), user.Email, user.Name)
 }

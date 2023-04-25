@@ -14,13 +14,13 @@ var (
 	includeFuture   = flag.Bool("include-future", false, "include tasks with after > now")
 )
 
-func listTaskOpts() *gosolo.ListOpts {
-	opts := &gosolo.ListOpts{}
+func listTaskOpts() *gosolo.ListOpts[gosolo.Task] {
+	opts := &gosolo.ListOpts[gosolo.Task]{}
 
 	if *includeComplete {
 		opts.Sorts = append(opts.Sorts, "+complete")
 	} else {
-		opts.Filters = append(opts.Filters, &gosolo.Filter{
+		opts.Filters = append(opts.Filters, gosolo.Filter{
 			Path:  "complete",
 			Op:    "eq",
 			Value: "false",
@@ -30,7 +30,7 @@ func listTaskOpts() *gosolo.ListOpts {
 	if *includeFuture {
 		opts.Sorts = append(opts.Sorts, "+after")
 	} else {
-		opts.Filters = append(opts.Filters, &gosolo.Filter{
+		opts.Filters = append(opts.Filters, gosolo.Filter{
 			Path:  "after",
 			Op:    "lte",
 			Value: "now",
@@ -53,8 +53,8 @@ func completeTask(ctx context.Context, c *gosolo.Client, args []string) error {
 	}
 
 	complete := true
-	updated, err := c.UpdateTask(ctx, task.ID, &gosolo.TaskRequest{
-		Complete: &complete,
+	updated, err := c.UpdateTask(ctx, task.ID, &gosolo.Task{
+		Complete: complete,
 	}, nil)
 	if err != nil {
 		return err
@@ -65,14 +65,14 @@ func completeTask(ctx context.Context, c *gosolo.Client, args []string) error {
 	return nil
 }
 
-func printTask(task *gosolo.TaskResponse) {
+func printTask(task *gosolo.Task) {
 	complete := "o"
-	name := *task.Name
+	name := task.Name
 
-	if task.Complete != nil && *task.Complete {
+	if task.Complete {
 		complete = color(2, "ø")
 		name = color(7, name)
-	} else if task.After != nil && task.After.After(time.Now()) {
+	} else if task.After.After(time.Now()) {
 		name = color(5, name)
 	}
 

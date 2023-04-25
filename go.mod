@@ -4,27 +4,17 @@ go 1.20
 
 require (
 	github.com/chzyer/readline v1.5.1
-	github.com/gopatchy/metadata v0.0.0-20230420053349-25837551c11d
-	github.com/gopatchy/path v0.0.0-20230420200321-29e8a1fe5e57
-	github.com/tasksolo/gosolo v0.0.0-20230420201429-4abc1532d076
+	github.com/gopatchy/metadata v0.0.0-20230424223338-33e58fee42bf
+	github.com/gopatchy/path v0.0.0-20230424234051-603b99fc608c
+	github.com/tasksolo/gosolo v0.0.0-20230425000445-abc56059be25
 )
 
 require (
 	cloud.google.com/go v0.110.0 // indirect
-	github.com/getkin/kin-openapi v0.116.0 // indirect
-	github.com/go-openapi/jsonpointer v0.19.6 // indirect
-	github.com/go-openapi/swag v0.22.3 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
-	github.com/gopatchy/jsrest v0.0.0-20230420184928-8e3c5df83e40 // indirect
-	github.com/gopatchy/patchyc v0.0.0-20230420200652-5a1bc7fd59c3 // indirect
-	github.com/invopop/yaml v0.2.0 // indirect
-	github.com/josharian/intern v1.0.0 // indirect
-	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
-	github.com/perimeterx/marshmallow v1.1.4 // indirect
+	github.com/gopatchy/jsrest v0.0.0-20230424233807-5231a3dd5640 // indirect
 	github.com/vfaronov/httpheader v0.1.0 // indirect
-	golang.org/x/exp v0.0.0-20230420155640-133eef4313cb // indirect
+	golang.org/x/exp v0.0.0-20230424174712-0ee363d48fb1 // indirect
 	golang.org/x/net v0.9.0 // indirect
 	golang.org/x/sys v0.7.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

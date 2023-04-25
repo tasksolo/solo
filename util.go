@@ -14,14 +14,6 @@ func getShortID(obj any) string {
 	return md.ID[0:4]
 }
 
-func ifEmpty(s *string) string {
-	if s == nil {
-		return ""
-	} else {
-		return *s
-	}
-}
-
 func color(c int, str string) string {
 	b := ""
 

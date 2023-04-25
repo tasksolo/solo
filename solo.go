@@ -15,11 +15,11 @@ type handler func(ctx context.Context, c *gosolo.Client, args []string) error
 var handlers = map[string]handler{
 	"task-complete": completeTask,
 	"task-done":     completeTask,
-	"task-list":     listWrapper[gosolo.TaskResponse]("task", listTaskOpts, printTask),
-	"task-ls":       listWrapper[gosolo.TaskResponse]("task", listTaskOpts, printTask),
+	"task-list":     listWrapper[gosolo.Task]("task", listTaskOpts, printTask),
+	"task-ls":       listWrapper[gosolo.Task]("task", listTaskOpts, printTask),
 
-	"user-list": listWrapper[gosolo.UserResponse]("user", nil, printUser),
-	"user-ls":   listWrapper[gosolo.UserResponse]("user", nil, printUser),
+	"user-list": listWrapper[gosolo.User]("user", nil, printUser),
+	"user-ls":   listWrapper[gosolo.User]("user", nil, printUser),
 }
 
 func usage() {
@@ -30,8 +30,8 @@ func usage() {
 }
 
 func main() {
-	addHandlers[gosolo.TaskResponse, gosolo.TaskRequest]("task")
-	addHandlers[gosolo.UserResponse, gosolo.UserRequest]("user")
+	addHandlers[gosolo.Task]("task")
+	addHandlers[gosolo.User]("user")
 
 	base := flag.String("base", "https://api.solø.com", "API base URL")
 	debug := flag.Bool("debug", false, "log HTTP details")
@@ -95,22 +95,22 @@ func main() {
 	}
 }
 
-func addHandlers[TOut, TIn any](name string) {
+func addHandlers[T any](name string) {
 	for _, cmd := range []string{"create", "make", "mk", "new"} {
 		handlers[fmt.Sprintf("%s-%s", name, cmd)] = func(ctx context.Context, c *gosolo.Client, args []string) error {
-			return create[TOut, TIn](ctx, c, name, args)
+			return create[T](ctx, c, name, args)
 		}
 	}
 
 	for _, cmd := range []string{"cat", "get", "show"} {
 		handlers[fmt.Sprintf("%s-%s", name, cmd)] = func(ctx context.Context, c *gosolo.Client, args []string) error {
-			return get[TOut](ctx, c, name, args)
+			return get[T](ctx, c, name, args)
 		}
 	}
 
 	for _, cmd := range []string{"change", "modify", "update"} {
 		handlers[fmt.Sprintf("%s-%s", name, cmd)] = func(ctx context.Context, c *gosolo.Client, args []string) error {
-			return update[TOut, TIn](ctx, c, name, args)
+			return update[T](ctx, c, name, args)
 		}
 	}
 }
