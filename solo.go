@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"flag"
 	"fmt"
 	"os"
@@ -33,8 +34,9 @@ func main() {
 	addHandlers[gosolo.Task]("task")
 	addHandlers[gosolo.User]("user")
 
-	base := flag.String("base", "https://api.solø.com", "API base URL")
+	base := flag.String("base", "https://api.solotask.io", "API base URL")
 	debug := flag.Bool("debug", false, "log HTTP details")
+	insecure := flag.Bool("insecure", false, "allow invalid TLS certs")
 	flag.Parse()
 
 	if len(flag.Args()) < 2 {
@@ -52,6 +54,10 @@ func main() {
 
 	c := gosolo.NewClient(*base).
 		SetDebug(*debug)
+
+	if *insecure {
+		c.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
+	}
 
 	ctx := context.Background()
 
