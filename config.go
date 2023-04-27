@@ -8,6 +8,7 @@ import (
 )
 
 type config struct {
+	// TODO: Make this a map of configs, keyed by an alias, with a base URL
 	Token *string `json:"token"`
 }
 
