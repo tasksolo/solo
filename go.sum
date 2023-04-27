@@ -20,6 +20,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/tasksolo/gosolo v0.0.0-20230427162029-e83da54af857 h1:pRFXocNWId0M4f4rbvVa5/JSUxWMUWk0nw/8PGBhSS4=
 github.com/tasksolo/gosolo v0.0.0-20230427162029-e83da54af857/go.mod h1:9rTIyeASzacsE2Npf0Q8q0XIcAJzMhhf3suHxhznP24=
+github.com/tasksolo/gosolo v0.0.0-20230427183545-ca822ec6430f h1:mL/IEiw/ZYC+E666hKmoqhLQIf+CSLMnzo9uxW9ZFPs=
+github.com/tasksolo/gosolo v0.0.0-20230427183545-ca822ec6430f/go.mod h1:9rTIyeASzacsE2Npf0Q8q0XIcAJzMhhf3suHxhznP24=
 github.com/vfaronov/httpheader v0.1.0 h1:VdzetvOKRoQVHjSrXcIOwCV6JG5BCAW9rjbVbFPBmb0=
 github.com/vfaronov/httpheader v0.1.0/go.mod h1:ZBxgbYu6nbN5V9Ptd1yYUUan0voD0O8nZLXHyxLgoLE=
 go.uber.org/goleak v1.2.1 h1:NBol2c7O1ZokfZ0LEU9K6Whx/KnwvepVetCUhtKja4A=

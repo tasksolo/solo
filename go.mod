@@ -6,7 +6,7 @@ require (
 	github.com/chzyer/readline v1.5.1
 	github.com/gopatchy/metadata v0.0.0-20230424223338-33e58fee42bf
 	github.com/gopatchy/path v0.0.0-20230427161756-8ddf6bee842d
-	github.com/tasksolo/gosolo v0.0.0-20230427162029-e83da54af857
+	github.com/tasksolo/gosolo v0.0.0-20230427183545-ca822ec6430f
 )
 
 require (
