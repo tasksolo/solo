@@ -53,6 +53,7 @@ func completeTask(ctx context.Context, c *gosolo.Client, args []string) error {
 	}
 
 	complete := true
+
 	updated, err := c.UpdateTask(ctx, task.ID, &gosolo.Task{
 		Complete: complete,
 	}, nil)

@@ -6,11 +6,11 @@ tidy:
 	{{go}} mod tidy
 	goimports -l -w .
 	gofumpt -l -w .
-	{{go}} fmt ./...
+	{{go}} fmt
 
 test:
-	{{go}} vet ./...
-	golangci-lint run ./...
+	{{go}} vet
+	golangci-lint run .
 
 todo:
 	-git grep -e TODO --and --not -e ignoretodo

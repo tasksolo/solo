@@ -25,6 +25,7 @@ func readConfig() (*config, error) {
 	cfg := &config{}
 
 	dec := json.NewDecoder(fh)
+
 	err = dec.Decode(cfg)
 	if err != nil {
 		return nil, err

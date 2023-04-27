@@ -56,7 +56,7 @@ func main() {
 		SetDebug(*debug)
 
 	if *insecure {
-		c.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
+		c.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true}) //nolint:gosec
 	}
 
 	ctx := context.Background()

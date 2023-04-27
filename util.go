@@ -18,7 +18,7 @@ func color(c int, str string) string {
 	b := ""
 
 	if c > 7 {
-		c = c % 8
+		c %= 8
 		b = ";1"
 	}
 

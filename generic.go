@@ -69,7 +69,7 @@ func listWrapper[T any](name string, optsCB func() *gosolo.ListOpts[T], printCB 
 
 func update[T any](ctx context.Context, c *gosolo.Client, name string, args []string) error {
 	if len(args) < 2 {
-		return fmt.Errorf("args: <id> <field>=<value> ...")
+		return fmt.Errorf("args: <id> <field>=<value> ...") //nolint:revive,stylecheck
 	}
 
 	shortID := args[0]
