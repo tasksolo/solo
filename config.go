@@ -1,11 +1,11 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
 	"os"
 
+	"github.com/pelletier/go-toml"
 	"github.com/tasksolo/gosolo"
 )
 
@@ -21,7 +21,7 @@ func readConfig() (map[string]*gosolo.Config, error) {
 
 	cfg := map[string]*gosolo.Config{}
 
-	dec := json.NewDecoder(fh)
+	dec := toml.NewDecoder(fh)
 
 	err = dec.Decode(&cfg)
 	if err != nil {
@@ -39,9 +39,8 @@ func writeConfig(cfg map[string]*gosolo.Config) error {
 
 	defer fh.Close()
 
-	enc := json.NewEncoder(fh)
-	enc.SetEscapeHTML(false)
-	enc.SetIndent("", "  ")
+	enc := toml.NewEncoder(fh)
+	enc.Indentation("")
 
 	err = enc.Encode(cfg)
 	if err != nil {

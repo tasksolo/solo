@@ -51,9 +51,10 @@ func main() {
 	}
 
 	if *profile == "" {
-		for name, _ := range cfgMap {
+		for name := range cfgMap {
 			fmt.Printf("%s\n", name)
 		}
+
 		return
 	}
 

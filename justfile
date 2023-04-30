@@ -5,7 +5,7 @@ default: tidy test
 tidy:
 	{{go}} mod tidy
 	goimports -l -w .
-	gofumpt -l -w .
+	gofumpt -gofumpt -l -w .
 	{{go}} fmt
 
 test:

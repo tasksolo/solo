@@ -16,6 +16,8 @@ github.com/gopatchy/metadata v0.0.0-20230424223338-33e58fee42bf h1:HKCbhVEpC3++y
 github.com/gopatchy/metadata v0.0.0-20230424223338-33e58fee42bf/go.mod h1:VgD33raUShjDePCDBo55aj+eSXFtUEpMzs+Ie39g2zo=
 github.com/gopatchy/path v0.0.0-20230428002245-f356a827269e h1:EuKWWNtvVlW7EdtJ4wl1I3jim4r2APJLFRStupuDR1c=
 github.com/gopatchy/path v0.0.0-20230428002245-f356a827269e/go.mod h1:7CKNPMltvwwEMZ+N0Ut9dlD30Zzfk+siQi6Wnm0WKXk=
+github.com/pelletier/go-toml v1.9.5 h1:4yBQzkHv+7BHq2PQUZF3Mx0IYxG7LsP222s7Agd3ve8=
+github.com/pelletier/go-toml v1.9.5/go.mod h1:u1nR/EPcESfeI/szUZKdtJ0xRNbUoANCkoOuaOx1Y+c=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 github.com/tasksolo/gosolo v0.0.0-20230428002737-fdc53c173e77 h1:rDOkxA2KxHt60RArc6gi4Z/CMMHz5ApCTT0fZIFpVec=
