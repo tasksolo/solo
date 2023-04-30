@@ -5,28 +5,25 @@ import (
 	"flag"
 	"fmt"
 	"os"
-)
 
-type config struct {
-	// TODO: Make this a map of configs, keyed by an alias, with a base URL
-	Token *string `json:"token"`
-}
+	"github.com/tasksolo/gosolo"
+)
 
 var configPath = flag.String("config", fmt.Sprintf("%s/.solo.conf", os.Getenv("HOME")), "config file path")
 
-func readConfig() (*config, error) {
+func readConfig() (map[string]*gosolo.Config, error) {
 	fh, err := os.Open(*configPath)
 	if err != nil {
-		return nil, err
+		return map[string]*gosolo.Config{}, nil //nolint:nilerr
 	}
 
 	defer fh.Close()
 
-	cfg := &config{}
+	cfg := map[string]*gosolo.Config{}
 
 	dec := json.NewDecoder(fh)
 
-	err = dec.Decode(cfg)
+	err = dec.Decode(&cfg)
 	if err != nil {
 		return nil, err
 	}
@@ -34,7 +31,7 @@ func readConfig() (*config, error) {
 	return cfg, nil
 }
 
-func writeConfig(cfg *config) error {
+func writeConfig(cfg map[string]*gosolo.Config) error {
 	fh, err := os.OpenFile(*configPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0o600)
 	if err != nil {
 		return err

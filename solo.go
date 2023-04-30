@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"crypto/tls"
 	"flag"
 	"fmt"
 	"os"
@@ -31,16 +30,81 @@ func usage() {
 }
 
 func main() {
+	var err error
+
+	ctx := context.Background()
+
 	addHandlers[gosolo.Task]("task")
 	addHandlers[gosolo.User]("user")
 
-	base := flag.String("base", "https://api.solotask.io", "API base URL")
+	profile := flag.String("profile", "default", "configuration profile name")
+	base := flag.String("base", "", "API base URL")
 	debug := flag.Bool("debug", false, "log HTTP details")
 	insecure := flag.Bool("insecure", false, "allow invalid TLS certs")
+
 	flag.Parse()
+
+	cfgMap, err := readConfig()
+	if err != nil {
+		fmt.Printf("%s\n", err)
+		os.Exit(1)
+	}
+
+	if *profile == "" {
+		for name, _ := range cfgMap {
+			fmt.Printf("%s\n", name)
+		}
+		return
+	}
 
 	if len(flag.Args()) < 2 {
 		usage()
+	}
+
+	cfg := cfgMap[*profile]
+
+	if cfg == nil {
+		cfg = &gosolo.Config{}
+	}
+
+	if *debug {
+		cfg.Debug = true
+	}
+
+	if *insecure {
+		cfg.Insecure = true
+	}
+
+	if *base != "" {
+		cfg.BaseURL = *base
+	}
+
+	getUserPass := func() (string, string, error) {
+		user, err := readline.Line("Login email: ")
+		if err != nil {
+			return "", "", err
+		}
+
+		pass, err := readline.Password("Login password: ")
+		if err != nil {
+			return "", "", err
+		}
+
+		return user, string(pass), nil
+	}
+
+	c, err := gosolo.NewClient(ctx, cfg, getUserPass)
+	if err != nil {
+		fmt.Printf("%s\n", err)
+		os.Exit(1)
+	}
+
+	cfgMap[*profile] = cfg
+
+	err = writeConfig(cfgMap)
+	if err != nil {
+		fmt.Printf("Error writing config: %s\n", err)
+		os.Exit(1)
 	}
 
 	noun := flag.Args()[0]
@@ -51,48 +115,6 @@ func main() {
 		fmt.Printf("Unknown command: %s %s\n\n", noun, verb)
 		usage()
 	}
-
-	c := gosolo.NewClient(*base).
-		SetDebug(*debug)
-
-	if *insecure {
-		c.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true}) //nolint:gosec
-	}
-
-	ctx := context.Background()
-
-	cfg, err := readConfig()
-	if err != nil {
-		user, err := readline.Line("Login email: ")
-		if err != nil {
-			fmt.Printf("Error reading login email: %s\n", err)
-			os.Exit(1)
-		}
-
-		pass, err := readline.Password("Login password: ")
-		if err != nil {
-			fmt.Printf("Error reading login password: %s\n", err)
-			os.Exit(1)
-		}
-
-		token, err := c.Auth(ctx, user, string(pass))
-		if err != nil {
-			fmt.Printf("Error authenticating: %s\n", err)
-			os.Exit(1)
-		}
-
-		cfg = &config{
-			Token: &token,
-		}
-
-		err = writeConfig(cfg)
-		if err != nil {
-			fmt.Printf("Error writing config: %s\n", err)
-			os.Exit(1)
-		}
-	}
-
-	c.SetAuthToken(*cfg.Token)
 
 	err = handler(ctx, c, flag.Args()[2:])
 	if err != nil {
