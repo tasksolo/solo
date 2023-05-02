@@ -20,8 +20,8 @@ github.com/pelletier/go-toml v1.9.5 h1:4yBQzkHv+7BHq2PQUZF3Mx0IYxG7LsP222s7Agd3v
 github.com/pelletier/go-toml v1.9.5/go.mod h1:u1nR/EPcESfeI/szUZKdtJ0xRNbUoANCkoOuaOx1Y+c=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
-github.com/tasksolo/gosolo v0.0.0-20230430231541-d6a973e3732d h1:5ff915+Eu1cl8IQKx8AqBbAq5CK+XDyEg72vN7dGOWY=
-github.com/tasksolo/gosolo v0.0.0-20230430231541-d6a973e3732d/go.mod h1:PTINSW4I31e6EcMO3l9SRT4g1E/tRHlzq7gnEtJKrUI=
+github.com/tasksolo/gosolo v0.0.0-20230502031835-4316487289b6 h1:LqLa2G9Q4pdcKgCgHzpcTILsli438SsdKEEczj22FYw=
+github.com/tasksolo/gosolo v0.0.0-20230502031835-4316487289b6/go.mod h1:PTINSW4I31e6EcMO3l9SRT4g1E/tRHlzq7gnEtJKrUI=
 github.com/vfaronov/httpheader v0.1.0 h1:VdzetvOKRoQVHjSrXcIOwCV6JG5BCAW9rjbVbFPBmb0=
 github.com/vfaronov/httpheader v0.1.0/go.mod h1:ZBxgbYu6nbN5V9Ptd1yYUUan0voD0O8nZLXHyxLgoLE=
 go.uber.org/goleak v1.2.1 h1:NBol2c7O1ZokfZ0LEU9K6Whx/KnwvepVetCUhtKja4A=
