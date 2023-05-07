@@ -20,6 +20,7 @@ var handlers = map[string]handler{
 
 	"user-list": listWrapper[gosolo.User]("user", nil, printUser),
 	"user-ls":   listWrapper[gosolo.User]("user", nil, printUser),
+	// TODO: Add "user getshard"
 }
 
 func usage() {

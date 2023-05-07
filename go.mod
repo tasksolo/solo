@@ -7,7 +7,7 @@ require (
 	github.com/gopatchy/metadata v0.0.0-20230424223338-33e58fee42bf
 	github.com/gopatchy/path v0.0.0-20230505055749-b787868754cc
 	github.com/pelletier/go-toml v1.9.5
-	github.com/tasksolo/gosolo v0.0.0-20230502031835-4316487289b6
+	github.com/tasksolo/gosolo v0.0.0-20230505150642-c2b90567b4e5
 )
 
 require (
